@@ -905,28 +905,72 @@ object {
 	margin: 0 auto;
 	height: auto;
 	display: grid;
-	grid-gap:20px;
+	grid-gap:10px;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: auto;
 }
 
 .site-header {
-	background-color: #FFAAA3; /*red*/
+	background-color: #FFAAA3; /*salmon*/
 	grid-row: 1; 
-   	grid-column: 1 / 6;
-	
+   	grid-column: 1 / 7;
+   	display: grid;
+   	grid-gap:10px;
+   	grid-template-columns: repeat(6, 1fr);	
 }
+
+	.site-branding {
+		background-color: white;
+		grid-row: 1;
+		grid-column: 3 / 5;
+	}
+
+		.site-description{
+			background-color: #76C2AA;
+			text-align: center;
+			display: inline-block;
+		}
+
+		.site-description:before,
+		.site-description:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			height: 1px;
+			display: block;
+			width: 60px;
+			background: #dedede;
+			left: 100%;
+		}
+
+	.main-navigation {
+		background-color: black;
+		grid-row: 2;
+		grid-column: 1 / 7;
+	}
 
 .site-content {
 	background-color: #A9C1FF; /*blue*/
-	grid-row: 2 ; 
-   	grid-column: 1 /  6;	
+	grid-row: 2; 
+   	grid-column: 1 / 7;	
+   	display: grid;
+   	grid-gap:10px;
+ 	grid-template-columns: repeat(6, 1fr);
+
 }
+	.content-area {
+		background-color: #E899B8; /*turquesa*/
+		grid-column: 1 / 5;	
+	}	
+
+	.widget-area {
+		background-color: #E876A3; /*pink*/
+		grid-column: 5/7;	
+	}	
 
 .site-footer {
 	background-color: #79AB7F; /*green*/
 	grid-row: 3 ; 
-	grid-column: 1 / 6;
+	grid-column: 1 / 7;
 }
 
 @media screen and (min-width: 960px)  {
