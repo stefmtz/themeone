@@ -893,3 +893,71 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+
+/*--------------------------------------------------------------
+## STEF
+--------------------------------------------------------------*/
+
+.site {
+	background-color: #FFF2AE; /*yellow*/
+	max-width: 1200px;
+	margin: 0 auto;
+	height: auto;
+	display: grid;
+	grid-gap:20px;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: auto;
+}
+
+.site-header {
+	background-color: #FFAAA3; /*red*/
+	grid-row: 1; 
+   	grid-column: 1 / 6;
+	
+}
+
+.site-content {
+	background-color: #A9C1FF; /*blue*/
+	grid-row: 2 ; 
+   	grid-column: 1 /  6;	
+}
+
+.site-footer {
+	background-color: #79AB7F; /*green*/
+	grid-row: 3 ; 
+	grid-column: 1 / 6;
+}
+
+@media screen and (min-width: 960px)  {
+	/*
+	.site {
+		grid-template-columns: 16.6666667% 16.6666667% 16.6666667% 16.6666667% 16.6666667% 16.6666667%;
+	  	grid-template-rows: 340px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px;
+	}
+
+	.site-header {
+		grid-row: 1; 
+	   	grid-column: 1 / span 6;		
+	}
+
+	.site-content {
+		grid-row: 2 / span 14; 
+	   	grid-column: 1 / span 6;
+		display: subgrid;		
+	}
+	
+		.widget-area {
+			background-color: #EB4169; 
+			grid-row: 2 / span 14; 
+			grid-column: 6;	
+		}
+
+	.site-footer {
+		grid-row: 16 / span 2; 
+		grid-column: 1 /span 6;
+	}
+
+*/
+}
+
