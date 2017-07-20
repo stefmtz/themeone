@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
+	<link href="https://fonts.googleapis.com/css?family=Amiri|Raleway" rel="stylesheet">	
 	<?php wp_head(); ?>
 </head>
 
@@ -47,10 +47,19 @@
 					<div class="site-description"><?php echo $description; /* WPCS: xss ok.*/  ?></div>
 				<?php 
 				endif;  ?>
+				<div class="social-header">
+					<a href="https://www.facebook.com/" target="_blank">F<i class="fa fa-facebook"></i></a>
+					<a href="#" target="_blank"><i class="fa fa-twitter">T</i></a>
+					<a href="#" target="_blank"><i class="fa fa-google-plus">G+</i></a>
+					<a href="#" target="_blank"><i class="fa fa-instagram">I</i></a>
+					<a href="#" target="_blank"><i class="fa fa-pinterest">P</i></a>
+					<a href="#" target="_blank"><i class="fa fa-tumblr">T</i></a>
+					<a href="#" target="_blank"><i class="fa fa-rss">RSS</i></a>
+				</div>
 			</div><!-- .container -->
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
+		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'themeone' ); ?></button>
 			<?php 
 				wp_nav_menu( array(
@@ -59,6 +68,7 @@
 				) );
 			 ?>
 		</nav><!-- #site-navigation -->
+	
 	</header><!-- #header -->
 
 	<div id="content" class="site-content">

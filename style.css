@@ -267,7 +267,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -349,6 +349,10 @@ html {
 *:before,
 *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
+}
+
+::selection {
+	background: #e7faed;
 }
 
 body {
@@ -507,36 +511,49 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #000000;
+	text-decoration: none;
 }
 
 a:visited {
-	color: purple;
+	color: #000000;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #CCCCCC;
 }
 
 a:focus {
-	outline: thin dotted;
+	/*outline: thin dotted;*/
 }
 
 a:hover,
 a:active {
-	outline: 0;
+	/*outline: 0;*/
 }
+
+.entry-content a{
+	border-bottom: 1px dashed;
+}
+
+.entry-content a:hover,
+a:focus,
+a:active {
+	color: #000000;
+	background-color: #e7faed;
+}
+
 
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+    display: block;
+    width: 100%;
+    margin: 0;
+    text-align: center;
 }
 
 .main-navigation ul {
@@ -547,31 +564,30 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
-	position: relative;
+	display: inline-grid;
+	margin: 2px 4em;
 }
 
 .main-navigation a {
-	display: block;
-	text-decoration: none;
+    padding: 1.2em 0;
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	/*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
 	top: 100%;
 	left: -999em;
-	z-index: 99999;
+	z-index: 99999;*/
 }
 
 .main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
+	/*left: -999em;
+	top: 0;*/
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+	/*width: 200px;*/
 }
 
 .main-navigation ul ul li {
@@ -592,12 +608,12 @@ a:active {
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	left: auto;
+/*	left: auto;*/
 }
 
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
-	left: 100%;
+	/*left: 100%;*/
 }
 
 .main-navigation .current_page_item > a,
@@ -900,77 +916,113 @@ object {
 --------------------------------------------------------------*/
 
 .site {
-	background-color: #FFF2AE; /*yellow*/
-	max-width: 1200px;
+	/*max-width: 1200px;*/
 	margin: 0 auto;
 	height: auto;
 	display: grid;
 	grid-gap:10px;
-	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(8, 1fr);
 }
 
 .site-header {
-	background-color: #FFAAA3; /*salmon*/
 	grid-row: 1; 
-   	grid-column: 1 / 7;
+   	grid-column: 1 / 9;
    	display: grid;
    	grid-gap:10px;
-   	grid-template-columns: repeat(6, 1fr);	
+	grid-template-columns: repeat(8, 1fr);
 }
 
 	.site-branding {
-		background-color: white;
 		grid-row: 1;
-		grid-column: 3 / 5;
+		grid-column: 1 / 9;
 	}
+		.site-title {
+			margin-bottom: 0;
+			text-align: center;
+		}
 
 		.site-description{
-			background-color: #76C2AA;
-			text-align: center;
-			display: inline-block;
+			width: 250px;
+			margin: 0 auto;
+			font-size: 0.875em;
+			overflow: hidden;
+			text-align: center;			
 		}
 
-		.site-description:before,
-		.site-description:after {
+		.site-description::before,
+		.site-description::after {
 			content: "";
-			position: absolute;
-			top: 50%;
-			height: 1px;
-			display: block;
-			width: 60px;
-			background: #dedede;
-			left: 100%;
+			display: inline-block;
+			width: 50%;
+			margin: 0 .5em 0 -55%;
+			vertical-align: middle;
+			border-bottom: 1px solid #DEDEDE;
 		}
+	
+		.site-description::after{
+			margin: 0 -55% 0 .5em;
+		}
+
+		.social-header {
+			text-align: center;
+		}
+
+			.social-icon .i-twitter::before {
+				content: "\e603";
+			}
 
 	.main-navigation {
-		background-color: black;
 		grid-row: 2;
-		grid-column: 1 / 7;
+		grid-column: 1 / 9;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		text-transform: uppercase;
+	    font-size: 0.7em;
+	    letter-spacing: 2px;
+	    font-weight: 600;
+
 	}
 
+	.menu-main-menu-container {
+		width: 100%;
+		text-align: center;
+	}
+
+
 .site-content {
-	background-color: #A9C1FF; /*blue*/
 	grid-row: 2; 
-   	grid-column: 1 / 7;	
+   	grid-column: 2 / 8;	
    	display: grid;
    	grid-gap:10px;
- 	grid-template-columns: repeat(6, 1fr);
+ 	grid-template-columns: repeat(8, 1fr);
 
 }
 	.content-area {
-		background-color: #E899B8; /*turquesa*/
-		grid-column: 1 / 5;	
-	}	
+		grid-column: 1 / 6;	
+	}
+
+		.entry-title {
+			font-family: "Amiri", serif;
+			font-size: 2.2em;
+		    font-weight: normal;
+		    letter-spacing: 0px;
+		    line-height: 1.2;
+		}
+
+		.entry-content {
+			font-family: "Raleway", sans-serif;
+		    font-size: 0.85em;
+		    letter-spacing: 1px;
+		    line-height: 1.9em;
+		}	
 
 	.widget-area {
-		background-color: #E876A3; /*pink*/
-		grid-column: 5/7;	
+		grid-column: 6/9;	
 	}	
 
 .site-footer {
-	background-color: #79AB7F; /*green*/
 	grid-row: 3 ; 
-	grid-column: 1 / 7;
+	grid-column: 1 / 9;
 }
 
 @media screen and (min-width: 960px)  {
