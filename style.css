@@ -916,7 +916,6 @@ object {
 --------------------------------------------------------------*/
 
 .site {
-	/*max-width: 1200px;*/
 	margin: 0 auto;
 	height: auto;
 	display: grid;
@@ -996,27 +995,36 @@ object {
    	grid-column: 2 / 8;	
    	display: grid;
    	grid-gap:10px;
- 	grid-template-columns: repeat(8, 1fr);
+ 	grid-template-columns: repeat(6, 1fr);
 
 }
 	.content-area {
-		grid-column: 1 / 6;	
+		grid-column: 1 / 5;			
 	}
-
-		.entry-title {
-			font-family: "Amiri", serif;
-			font-size: 2.2em;
-		    font-weight: normal;
-		    letter-spacing: 0px;
-		    line-height: 1.2;
+		.site-main {
+			display: grid;
+			grid-gap:35px;
+	 		grid-template-columns: repeat(4, 1fr);	
 		}
 
-		.entry-content {
-			font-family: "Raleway", sans-serif;
-		    font-size: 0.85em;
-		    letter-spacing: 1px;
-		    line-height: 1.9em;
-		}	
+		.post {
+   			grid-column: span 2;	
+		}
+
+			.entry-title {
+				font-family: "Amiri", serif;
+				font-size: 2.2em;
+			    font-weight: normal;
+			    letter-spacing: 0px;
+			    line-height: 1.2;
+			}
+
+			.entry-content {
+				font-family: "Raleway", sans-serif;
+			    font-size: 0.85em;
+			    letter-spacing: 1px;
+			    line-height: 1.9em;
+			}	
 
 	.widget-area {
 		grid-column: 6/9;	
