@@ -1027,7 +1027,8 @@ object {
 			}	
 
 	.widget-area {
-		grid-column: 6/9;	
+		grid-column: 5/7;
+		background-color: #B1F3C6;	
 	}	
 
 .site-footer {
