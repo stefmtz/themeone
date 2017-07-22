@@ -933,6 +933,7 @@ object {
 }
 
 	.site-branding {
+		padding: 30px 0;
 		grid-row: 1;
 		grid-column: 1 / 9;
 	}
@@ -965,10 +966,11 @@ object {
 
 		.social-header {
 			text-align: center;
+			margin: 20px 0 0;
 		}
 
-			.social-icon .i-twitter::before {
-				content: "\e603";
+			.social-header a {
+				padding-right: 13px;
 			}
 
 	.main-navigation {

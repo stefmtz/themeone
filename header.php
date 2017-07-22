@@ -16,7 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link href="https://fonts.googleapis.com/css?family=Amiri|Raleway" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css?family=Amiri|Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/33b23678f9.css">
 	<?php wp_head(); ?>
 </head>
 
@@ -48,13 +49,13 @@
 				<?php 
 				endif;  ?>
 				<div class="social-header">
-					<a href="https://www.facebook.com/" target="_blank">F<i class="fa fa-facebook"></i></a>
-					<a href="#" target="_blank"><i class="fa fa-twitter">T</i></a>
-					<a href="#" target="_blank"><i class="fa fa-google-plus">G+</i></a>
-					<a href="#" target="_blank"><i class="fa fa-instagram">I</i></a>
-					<a href="#" target="_blank"><i class="fa fa-pinterest">P</i></a>
-					<a href="#" target="_blank"><i class="fa fa-tumblr">T</i></a>
-					<a href="#" target="_blank"><i class="fa fa-rss">RSS</i></a>
+					<a href="https://www.facebook.com/" target="_blank" ><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
+					<a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></i></a>
+					<a href="#" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i>
+</i></a>
+					<a href="#" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i>
+</i></a>
 				</div>
 			</div><!-- .container -->
 		</div><!-- .site-branding -->
