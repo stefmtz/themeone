@@ -767,7 +767,7 @@ a:active {
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	/*margin: 0 0 1.5em;*/
 }
 
 .updated:not(.published) {
@@ -999,12 +999,14 @@ object {
 	}
 		.site-main {
 			display: grid;
-			grid-gap:35px;
+			grid-gap: 2.5em;
 	 		grid-template-columns: repeat(4, 1fr);	
 		}
 
 		.post {
-   			grid-column: span 2;	
+   			grid-column: span 2;
+   			border-bottom: 1px solid #ddd;	
+   			padding: 0 0 2.5em 0;
 		}
 
 			.entry-header {
