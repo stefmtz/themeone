@@ -155,3 +155,11 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+/**
+ * Modify The Read More Link Text.
+ */
+
+function modify_read_more_link() {
+    return '<div class="more-div"><a class="more-link" href="' . get_permalink() . '">Seguir leyendo &#187;</a></div>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
